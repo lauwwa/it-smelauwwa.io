@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.jpg);
+}
+
+nav{
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    cursor: pointer;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    position: relative;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-left: 5px;
+}
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: rgb(192, 0, 38);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+nav ul li a:hover::after{
+    transform: scaleX(1);
+}
+
+.detail{
+    margin-left: 8%;
+    margin-top: 13%;
+}
+
+.detail h1{
+    font-size: 50px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+span{
+    color: rgb(203, 0, 24);
+}
+
+.detail p{
+    color: #ffffff;
+    line-height: 22px;
+}
+
+.pdf{
+    position: relative;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid rgb(252, 54, 10);
+    padding: 10px 20px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 1s;
+}
+.pdf:hover{
+    color: #fff;
+    box-shadow: 
+        0 0 10px rgb(252, 54, 10),
+        0 0 20px rgb(252, 54, 10),
+        0 0 40px rgb(252, 54, 10),
+        0 0 80px rgb(252, 54, 10);
+}
+
+.pdf::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background: rgb(252, 54, 10);
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: 1s;
+}
+
+.pdf:hover:before{
+    width: 100%;
+
+}
+
+.images{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.images img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.images:hover .shape{
+    bottom: 40px;
+}
+
+.images:hover .me{
+    left: 45%;
+}
