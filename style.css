@@ -76,7 +76,7 @@ span{
 
 .pdf{
     position: relative;
-    margin-top: 10px;
+    margin-top: 30px;
     display: inline-block;
     font-size: 16px;
     font-weight: bold;
@@ -84,7 +84,7 @@ span{
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
-    border: 2px solid rgb(252, 54, 10);
+    border: 2px solid rgb(192, 0, 38);
     padding: 10px 20px;
     z-index: 1;
     overflow: hidden;
@@ -93,10 +93,10 @@ span{
 .pdf:hover{
     color: #fff;
     box-shadow: 
-        0 0 10px rgb(252, 54, 10),
-        0 0 20px rgb(252, 54, 10),
-        0 0 40px rgb(252, 54, 10),
-        0 0 80px rgb(252, 54, 10);
+        0 0 10px rgb(192, 0, 38),
+        0 0 20px rgb(192, 0, 38),
+        0 0 40px rgb(192, 0, 38),
+        0 0 80px rgb(192, 0, 38);
 }
 
 .pdf::before{
@@ -140,4 +140,12 @@ span{
 
 .images:hover .me{
     left: 45%;
+}
+
+@media screen and (max-width: 600px)
+{
+    .detail h1{
+        font-size: 36px;
+
+    }
 }
